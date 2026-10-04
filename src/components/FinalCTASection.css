@@ -1,0 +1,183 @@
+.vaultic-final-cta-section {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+}
+
+.final-cta-card {
+  position: relative;
+  background-color: var(--primary-blue);
+  border-radius: 36px;
+  overflow: hidden;
+  padding: 56px 56px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  min-height: 410px;
+  box-sizing: border-box;
+}
+
+/* Teal background line image exported by user */
+.cta-teal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-teal-line-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 660px;
+  max-width: 65%;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+}
+
+/* Left Content */
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  padding-bottom: 56px;
+}
+
+/* Semibold 600 as requested */
+.cta-heading {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.04em !important;
+}
+
+.cta-subtext {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 440px;
+  margin-bottom: 34px;
+}
+
+.cta-playstore-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playstore-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.google-play-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #ffffff;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.google-play-pill-btn:hover {
+  background-color: #111827;
+  transform: translateY(-2px);
+}
+
+.play-glyph-svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.play-label-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.play-mini-caption {
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.play-store-title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* Right Mockup cut at bottom matching the screenshot */
+.final-cta-phone-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  height: 354px;
+  overflow: hidden;
+}
+
+.final-cta-phone-cut {
+  width: 500px;
+  max-width: none;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .final-cta-card {
+    grid-template-columns: 1fr;
+    padding: 40px 28px 0;
+    min-height: auto;
+   
+  }
+
+  .cta-heading {
+    font-size: 24px !important;
+  }
+
+  .final-cta-content {
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center ;
+  }
+
+  .final-cta-phone-container {
+    height: 280px;
+    justify-content: center;
+  }
+
+  .final-cta-phone-cut {
+    width: 380px;
+  }
+
+  .cta-teal-line-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

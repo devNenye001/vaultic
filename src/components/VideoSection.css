@@ -1,0 +1,35 @@
+.vaultic-video-section {
+  padding: 40px 0 60px;
+  background-color: #ffffff;
+}
+
+.video-banner-box {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-banner-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-banner-box {
+    height: 300px;
+    border-radius: 24px;
+  }
+
+  .video-banner-media {
+    border-radius: 24px;
+  }
+}

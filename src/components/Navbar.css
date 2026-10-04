@@ -1,0 +1,128 @@
+.vaultic-navbar {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Bigger logo as requested */
+.logo-img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  color: #4b5563;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.chevron-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-cta {
+  padding: 12px 30px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.nav-cta:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.burger-btn {
+  display: none;
+  background: none;
+  color: var(--text-main);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/* Mobile Drawer */
+.mobile-menu-drawer {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-img {
+    height: 15px;
+  }
+
+  .mobile-menu-drawer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 28px;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav-link {
+    font-size: 16px;
+    color: var(--text-main);
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+}

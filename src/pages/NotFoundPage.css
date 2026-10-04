@@ -1,0 +1,86 @@
+.vaultic-not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.not-found-main-area {
+  flex: 1;
+}
+
+.not-found-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 70px;
+}
+
+/* Gray box with black circle and exclamation mark */
+.exclamation-square-box {
+  width: 52px;
+  height: 52px;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.exclamation-circle-glyph {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exclamation-text {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.not-found-headline {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.not-found-subtext {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+
+.not-found-btn-wrapper {
+  margin-bottom: 40px;
+}
+
+.not-found-home-btn {
+  padding: 11px 36px;
+  font-size: 14px;
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 768px) {
+  .not-found-headline {
+    font-size: 24px !important;
+  }
+
+  .not-found-subtext br {
+    display: none;
+  }
+}

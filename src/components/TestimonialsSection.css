@@ -1,0 +1,120 @@
+.vaultic-testimonials {
+  padding: 85px 0 95px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.testimonials-top-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.testimonials-headline {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-main);
+  letter-spacing: -0.04em !important;
+}
+
+.testimonials-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.arrow-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #111111;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
+}
+
+.arrow-circle-btn:hover:not(:disabled) {
+  background-color: #27272a;
+  transform: scale(1.05);
+}
+
+.arrow-circle-btn.disabled,
+.arrow-circle-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Scroll Container with completely hidden scrollbars */
+.testimonials-track-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding-bottom: 8px;
+}
+
+.testimonials-track-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.review-card-item {
+  flex: 0 0 285px;
+  width: 285px;
+  background-color: #F3F3F3;
+  border-radius: 28px;
+  padding: 34px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease;
+}
+
+.review-card-item:hover {
+  transform: translateY(-3px);
+}
+
+.review-quote-text {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #27272A;
+  margin-bottom: 24px;
+}
+
+.review-author-name {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #18181B;
+}
+
+@media (max-width: 768px) {
+  .testimonials-headline {
+    font-size: 24px !important;
+  }
+
+  .review-card-item {
+    flex: 0 0 260px;
+    width: 260px;
+    padding: 28px 20px 24px;
+    border-radius: 24px;
+  }
+}
