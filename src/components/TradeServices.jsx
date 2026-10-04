@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiChevronRight } from 'react-icons/fi';
 import './TradeServices.css';
@@ -31,18 +32,31 @@ export default function TradeServices() {
     <section className="vaultic-trade-services" id="features">
       <div className="container">
         {/* Section title & subtitle - exact copy from screenshot */}
-        <div className="services-section-heading">
+        <motion.div 
+          className="services-section-heading"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <h2 className="section-title-center">What Are You Trading Today?</h2>
           <p className="section-subtitle-center">
             Choose what you need and get<br />
             started in just a few steps.
           </p>
-        </div>
+        </motion.div>
 
         {/* Two Stacked Feature Cards matching exact screenshot */}
         <div className="services-cards-stack">
           {/* Card 1: Crypto */}
-          <div className="service-banner-card crypto-banner-card">
+          <motion.div 
+            className="service-banner-card crypto-banner-card"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+          >
             {/* Back Teal Ribbon: Enters from top, weaves behind the phone and loops out to the right */}
             <svg 
               className="decor-teal-back" 
@@ -113,10 +127,17 @@ export default function TradeServices() {
                 strokeLinejoin="round" 
               />
             </svg>
-          </div>
+          </motion.div>
 
           {/* Card 2: Gift Cards */}
-          <div className="service-banner-card gift-banner-card">
+          <motion.div 
+            className="service-banner-card gift-banner-card"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+          >
             {/* Back Teal Ribbon: Diagonal band on bottom-left and smooth loop on right */}
             <svg 
               className="decor-teal-back" 
@@ -164,7 +185,7 @@ export default function TradeServices() {
                 className="service-phone-cut" 
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

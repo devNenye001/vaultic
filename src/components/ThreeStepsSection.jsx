@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './ThreeStepsSection.css';
 
 export default function ThreeStepsSection() {
@@ -33,14 +34,20 @@ export default function ThreeStepsSection() {
       <div className="container">
         <div className="steps-container-layout">
           {/* Left Column Header */}
-          <div className="steps-header-col">
+          <motion.div 
+            className="steps-header-col"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <h2 className="steps-main-title">
               Start Trading in 3 steps
             </h2>
             <p className="steps-subtitle">
               Get started, choose your trade, and complete your transaction.
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Column: Timeline & Cards */}
           <div className="steps-timeline-col">
@@ -59,8 +66,13 @@ export default function ThreeStepsSection() {
 
                 return (
                   <React.Fragment key={step.number}>
-                    <div 
+                    <motion.div 
                       className={`step-row-item ${isActive ? 'step-active' : ''}`}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.5, delay: (step.number - 1) * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                      whileHover={{ y: -3, transition: { duration: 0.2 } }}
                       onMouseEnter={() => setActiveStep(step.number)}
                       onClick={() => setActiveStep(step.number)}
                     >
@@ -84,7 +96,7 @@ export default function ThreeStepsSection() {
                           <p className="step-item-desc">{step.description}</p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* Responsive connector line leading to the next card */}
                     {step.number < steps.length && (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './FinalCTASection.css';
 
 function GooglePlayColorIcon() {
@@ -57,7 +58,13 @@ export default function FinalCTASection() {
   return (
     <section className="vaultic-final-cta-section" id="download">
       <div className="container">
-        <div className="final-cta-card">
+        <motion.div 
+          className="final-cta-card"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+        >
           {/* Teal curved line design exported as teal-line */}
           <div className="cta-teal-backdrop">
             <img 
@@ -81,18 +88,20 @@ export default function FinalCTASection() {
 
             <div className="cta-playstore-block">
               <span className="playstore-label">AVAILABLE ON PLAYSTORE</span>
-              <a 
+              <motion.a 
                 href="https://play.google.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="google-play-pill-btn"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <GooglePlayColorIcon />
                 <div className="play-label-group">
                   <span className="play-mini-caption">GET IT ON</span>
                   <span className="play-store-title">Google Play</span>
                 </div>
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -104,7 +113,7 @@ export default function FinalCTASection() {
               className="final-cta-phone-cut"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
